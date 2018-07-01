@@ -44,5 +44,5 @@ self.addEventListener('fetch', event => {
           .catch(event => {
           console.log('error caching and fetching');
         }))
-      );
+      ));
     });
