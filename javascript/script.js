@@ -13,7 +13,7 @@ if ('serviceWorker' in navigator) {
 }
 
 
-const url_currency = "https://free.currencyconverterapi.com/api/v5/currencies";
+const url_currency = "https://free.currconv.com/api/v7/currencies?apiKey=573e8dc345f65e9f33f2";
 fetch(url_currency)
   .then(handleErrors)
   .then(parseJSON)
@@ -55,7 +55,7 @@ $("#convertBtn").on("click", () => {
   const From = $('#from-curr option:selected').val();
   const To = $('#to-curr option:selected').val(); 
   const query = `${From}_${To}`;
-  const queryUrl = `https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=y`; 
+  const queryUrl = `https://free.currconv.com/api/v7/convert?q=${query}&compact=y&apiKey=573e8dc345f65e9f33f2`; 
   fetch(queryUrl)
     .then(parseJSON)
     .then(parsedData => {
